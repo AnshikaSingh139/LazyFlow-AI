@@ -1,0 +1,296 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LazyFlow AI | Do Less, Get More Done</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">🦥</span>
+            <span>LazyFlow<span class="logo-ai"> AI</span></span>
+        </a>
+
+        <div class="nav-right">
+            <span class="status-dot"></span>
+            <span class="status-text">Your slow productivity space</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR PERSONAL AI ASSISTANT</span>
+
+                <h1>Do less.<br>
+                    <span class="highlight">Breathe more.</span>
+                </h1>
+
+                <p>
+                    Your day doesn't have to be overwhelming.
+                    Let LazyFlow simplify your tasks, organize your thoughts,
+                    and give your brain a little breathing room.
+                </p>
+
+                <a href="#tools" class="primary-button">
+                    Make life easier <span>→</span>
+                </a>
+            </div>
+
+            <div class="hero-illustration">
+                <div class="illustration-circle">
+                    <div class="sloth">🦥</div>
+                    <span class="floating-item item-one">✦</span>
+                    <span class="floating-item item-two">☁</span>
+                    <span class="floating-item item-three">zZ</span>
+                </div>
+
+                <div class="hero-caption">
+                    <span>Today's reminder</span>
+                    <strong>Slow progress is still progress.</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Overview -->
+        <section class="overview">
+            <div class="overview-card">
+                <div class="overview-icon lavender">☀️</div>
+                <div>
+                    <span class="card-label">Your mindset</span>
+                    <h3>One thing at a time</h3>
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <div class="overview-icon mint">🌿</div>
+                <div>
+                    <span class="card-label">Your reminder</span>
+                    <h3>Rest is productive too</h3>
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <div class="overview-icon peach">✨</div>
+                <div>
+                    <span class="card-label">Your goal</span>
+                    <h3>Less stress, more flow</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Tools -->
+        <section id="tools" class="tools-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR PERSONAL TOOLKIT</span>
+                    <h2>What can I make easier?</h2>
+                </div>
+
+                <span class="tool-count">04 TOOLS</span>
+            </div>
+
+            <div class="tools-grid">
+
+                <!-- Task Planner -->
+                <article class="tool-card">
+                    <div class="tool-top">
+                        <div class="tool-icon mint">📝</div>
+                        <span class="tool-tag">ORGANIZE</span>
+                    </div>
+
+                    <h3>Smart To-Do Planner</h3>
+
+                    <p>
+                        Get everything out of your head and into
+                        one manageable list.
+                    </p>
+
+                    <label for="taskInput">What's on your mind?</label>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="e.g. Finish my assignment"
+                    >
+
+                    <button class="tool-button" id="addTaskButton">
+                        Add my task <span>→</span>
+                    </button>
+
+                    <div id="taskMessage" class="message" aria-live="polite"></div>
+
+                    <div class="task-area">
+                        <div class="task-heading">
+                            <strong>My tasks</strong>
+                            <span id="taskCount">0 tasks</span>
+                        </div>
+
+                        <ul id="taskList" class="task-list"></ul>
+                    </div>
+                </article>
+
+                <!-- Lazy Mode -->
+                <article class="tool-card">
+                    <div class="tool-top">
+                        <div class="tool-icon lavender">⚡</div>
+                        <span class="tool-tag">SIMPLIFY</span>
+                    </div>
+
+                    <h3>Lazy Mode</h3>
+
+                    <p>
+                        Big task? No problem. Break it down into
+                        smaller steps that feel easier to start.
+                    </p>
+
+                    <label for="bigTaskInput">Your big task</label>
+
+                    <textarea
+                        id="bigTaskInput"
+                        rows="3"
+                        placeholder="e.g. Prepare for my physics exam"
+                    ></textarea>
+
+                    <button class="tool-button" id="breakTaskButton">
+                        Make it manageable <span>→</span>
+                    </button>
+
+                    <div id="lazyOutput" class="output-box" aria-live="polite">
+                        <p class="placeholder">
+                            Your smaller steps will appear here.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Text Summarizer -->
+                <article class="tool-card">
+                    <div class="tool-top">
+                        <div class="tool-icon peach">📄</div>
+                        <span class="tool-tag">SAVE TIME</span>
+                    </div>
+
+                    <h3>Quick Summarizer</h3>
+
+                    <p>
+                        Turn a long paragraph into a shorter,
+                        easier-to-read version.
+                    </p>
+
+                    <label for="summaryInput">Paste your text</label>
+
+                    <textarea
+                        id="summaryInput"
+                        rows="4"
+                        placeholder="Paste notes, an article, or any text..."
+                    ></textarea>
+
+                    <button class="tool-button" id="summarizeButton">
+                        Summarize text <span>→</span>
+                    </button>
+
+                    <div id="summaryOutput" class="output-box" aria-live="polite">
+                        <p class="placeholder">
+                            Your summary will appear here.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Wind Down -->
+                <article class="tool-card">
+                    <div class="tool-top">
+                        <div class="tool-icon blue">🌙</div>
+                        <span class="tool-tag">UNWIND</span>
+                    </div>
+
+                    <h3>Wind-Down Planner</h3>
+
+                    <p>
+                        Create a gentle evening routine
+                        to finish your day without rushing.
+                    </p>
+
+                    <label for="moodSelect">How are you feeling?</label>
+
+                    <select id="moodSelect">
+                        <option value="tired">Tired and low-energy</option>
+                        <option value="stressed">Stressed and overwhelmed</option>
+                        <option value="busy">Busy but doing okay</option>
+                        <option value="calm">Calm and relaxed</option>
+                    </select>
+
+                    <button class="tool-button" id="routineButton">
+                        Plan my wind-down <span>→</span>
+                    </button>
+
+                    <div id="routineOutput" class="output-box" aria-live="polite">
+                        <p class="placeholder">
+                            Your gentle evening plan will appear here.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- AI Connection -->
+        <section class="ai-section">
+            <div class="ai-icon">🤖</div>
+
+            <div class="ai-content">
+                <span class="eyebrow">BUILT FOR OPEN INNOVATION</span>
+
+                <h2>AI that works at your pace.</h2>
+
+                <p>
+                    LazyFlow starts with simple, browser-based tools.
+                    Connect a locally running open-weight model to add
+                    AI-generated task breakdowns, summaries, and routines.
+                </p>
+
+                <div class="ai-features">
+                    <span>✓ Open-weight model support</span>
+                    <span>✓ Local AI option</span>
+                    <span>✓ No API key needed for basic tools</span>
+                </div>
+
+                <div class="ai-connection">
+                    <span id="aiStatusDot" class="connection-dot"></span>
+                    <span id="aiStatus">Checking local AI availability...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="#" class="logo footer-logo">
+                🦥 LazyFlow AI
+            </a>
+
+            <p>Made for slower days and lighter minds.</p>
+
+            <span>Open innovation • Thoughtful productivity • 2026</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
